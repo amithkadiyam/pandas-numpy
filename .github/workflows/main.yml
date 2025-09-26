@@ -18,8 +18,7 @@ jobs:
         with: 
           pyhton-version: '3.9'
 
-      - name: Install dependencies 
-        run: pip install -r requiements.txt
+      
 
       - name: Run Python script
         run: python pandas.py
