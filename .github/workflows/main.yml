@@ -1,0 +1,25 @@
+name: Run Python Script
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: 
+          pyhton-version: '3.9'
+
+      - name: Install dependencies 
+        run: pip install -r requiements.txt
+
+      - name: Run Python script
+        run: python pandas.py
