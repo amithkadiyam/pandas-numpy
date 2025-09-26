@@ -16,9 +16,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with: 
-          pyhton-version: '3.9'
+          python-version: '3.9'
 
-      
+      - name: Install dependencies
+        run: pip install pandas numpy
 
       - name: Run Python script
-        run: python pandas.py
+        run: python main.py
